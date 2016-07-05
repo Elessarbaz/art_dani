@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Art Dani | Главная</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Play&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/components/sticky.min.css">
+  <link rel="stylesheet" href="css/components/slidenav.min.css">
+  <link rel="stylesheet" href="css/components/slider.min.css">
+  <link rel="stylesheet" href="css/components/slideshow.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+
+  <header>
+    <div class="uk-container uk-container-center upper-row">
+      <div class="uk-grid">
+
+        <!--НАЧАЛО Лого и слоган-->
+        <div class="uk-width-medium-1-3 logo-and-solgan-container">
+          <a href="index.html"><img class="logo" src="img/logo.png" alt="Лого"></a>
+          <p class="slogan">Мебель, как Вы хотите</p>
+        </div>
+        <!--КОНЕЦ Лого и слоган-->
+
+        <!--НАЧАЛО Короткое описание и контакты-->
+        <div class="uk-width-medium-2-3 summary-and-contacts-container">
+          <p class="summary">Недорогие кухни на заказ любых размеров. Шкафы купе и встроенные шкафы. Недорогие
+            гостиные и спальни.
+          </p>
+          <p class="contacts">
+            <a href="tel:+77011111111">+7 701 111 11 11</a> <br class="uk-visible-small">
+            <a href="tel:+77011111111">+7 702 222 22 22</a> <br class="uk-visible-small">
+            <a href="mailto:email@email.kz">email@email.kz</a>
+          </p>
+        </div>
+        <!--КОНЕЦ Короткое описание и контакты-->
+
+      </div>
+
+      <!--Сслыка для вызова off-canvas'а: (сам off-canvas находится внизу документа) -->
+      <div class="uk-visible-small navbar-toggle-container" data-uk-sticky="{top:-200, animation: 'uk-animation-slide-top'}">
+        <a href="#navmenu-off-canvas" class="uk-navbar-toggle" data-uk-offcanvas></a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!--НАЧАЛО слайдбар-->
+  <div class="main-slider uk-slidenav-position" data-uk-slider="{autoplay:true, autoplayInterval: 4000}">
+
+      <div class="uk-slider-container">
+        <ul class="uk-slider uk-grid-width-large-1-3 uk-grid-width-medium-1-2 uk-grid-width-medium-1-1 images-grid">
+          <li style="background-image: url('img/main1.jpg')">
+            <p>Описание к фотографии</p>
+          </li>
+          <li style="background-image: url('img/main2.jpg')">
+            <p>Описание к фотографии</p>
+          </li>
+          <li style="background-image: url('img/main3.jpg')">
+            <p>Описание к фотографии</p>
+          </li>
+        </ul>
+      </div>
+      <a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>
+      <a href="" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next"></a>
+
+  </div>
+  <!--КОНЕЦ слайдбар-->
+
+  <main class="uk-container uk-container-center">
+    <div class="uk-grid">
+
+      <div class="uk-width-medium-1-4">
+        <!--НАЧАЛО нав-сайдбар-->
+        <ul class="uk-nav uk-hidden-small uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+          <li class="uk-active"><a href="index.html">Главная</a></li>
+          <li><a href="portfolio.html">Наши работы</a></li>
+
+          <li class="uk-parent">
+            <a href="#">Кухни</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Подкатегория 1</a></li>
+              <li><a href="#">Подкатегория 2</a></li>
+            </ul>
+          </li>
+
+          <li class="uk-parent">
+            <a href="#">Фотопечать на стекле</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Подкатегория 1</a></li>
+              <li><a href="#">Подкатегория 2</a></li>
+            </ul>
+          </li>
+
+          <li class="uk-parent">
+            <a href="#">Шкафы-купе</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Подкатегория 1</a></li>
+              <li><a href="#">Подкатегория 2</a></li>
+            </ul>
+          </li>
+
+          <li class="uk-parent">
+            <a href="#">Гостиные</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Подкатегория 1</a></li>
+              <li><a href="#">Подкатегория 2</a></li>
+            </ul>
+          </li>
+
+          <li class="uk-parent">
+            <a href="#">Спальни</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Подкатегория 1</a></li>
+              <li><a href="#">Подкатегория 2</a></li>
+            </ul>
+          </li>
+
+          <li class="uk-parent">
+            <a href="#">Мебель на заказ</a>
+            <ul class="uk-nav-sub">
+              <li><a href="#">Подкатегория 1</a></li>
+              <li><a href="#">Подкатегория 2</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Контакты</a></li>
+
+        </ul>
+        <!--КОНЕЦ нав-сайдбар-->
+      </div>
+
+
+      <div class="uk-width-medium-3-4 index content-container">
+        <h1>Главная</h1>
+        <p class="summary">
+          Недорогая мебель на заказ в Алматы. <br>
+          Кухни любого размера и цвета. <br>
+          Шкафы-купе большой выбор наполнения створок фотопечать, зеркало, лдсп. <br>
+          Красивые и недорогие гостиные и прихожие. <br>
+          Мы делаем мебель по индивидуальным размерам! <br>
+        </p>
+        <h2>Наши приемущества</h2>
+        <h3><i class="uk-icon-usd"></i> Цена</h3>
+        <p>Мы работаем напрямую с фабриками. Наши цены в среднем на 20% ниже по городу Алматы, поэтому у нас покупать выгодно.</p>
+        <h3><i class="uk-icon-check-circle"></i> Фабричное качество</h3>
+        <p>Вся мебель изготавливается на фабрике. Никакого кустарного производства. Только современное импортное оборудование. Гарантия.</p>
+        <h3><i class="uk-icon-sort-numeric-asc"></i> Бесплатный замер</h3>
+        <p>
+          <a href="img/example1.jpg" data-uk-lightbox title="Описание">
+            <img src="img/example1.jpg" class="uk-float-left">
+          </a>
+          Выезд нашего замерщика бесплатный. Наш специалист приедет к Вам домой и произведёт профессиональный замер помещения, где предполагается установить  мебель. Планировку, стены, трубы, проводку и еще кучу разных мелочей, которые нельзя учесть   в магазине, нужно смотреть на месте. У нашего специалиста с собой образцы фасадов и наши каталоги с мебелью, на любой вкус. Цвет образцов тоже  нужно смотреть под вашим освещением у Вас дома.</p>
+        <h3><i class="uk-icon-clock-o"></i> Время изготовления</h3>
+        <p>Время изготовления 1-2 недели. Мы знаем как Вам важно, чтобы Ваша красивая мебель была как можно быстрее у Вас дома. Уже через 7-14 дней мебель изготовленная под ваш размер  будет у Вас.</p>
+        <h3><i class="uk-icon-credit-card-alt"></i> Оплата</h3>
+        <a href="img/example2.jpg" data-uk-lightbox title="Описание">
+          <img src="img/example2.jpg" class="uk-float-right">
+        </a>
+        <p>Оплата это часто самый важный вопрос для Вас. Поэтому мы предлагаем самые лояльные условия. Вы вносите предоплату в размере всего 10% от стоимости мебели.То есть, мы не берем ни 30%, ни 50%, как многие фирмы. Остальную сумму Вы оплачиваете только после доставки Вам кухни. Деньги за сборку мебели Вы отдаете только после сборки. То есть, Вы ничем не рискуете.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-flex uk-container uk-container-center">
+      <div class="logo-and-solgan-container">
+        <a href="index.html"><img class="logo" src="img/logo.png" alt="Лого"></a>
+        <p class="slogan">Мебель, как Вы хотите</p>
+      </div>
+      <div class="map">
+        <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fyycaM9ARr4kPXttQAeX7dWrevcM_1oN&width=100%&height=240&lang=ru_RU&sourceType=constructor"></script>
+      </div>
+      <div class="contacts">
+        <h3>Наши контакты</h3>
+
+        <p>г.Алматы ул. Улица 1/1 , уг. ул. Улица
+          Дом 11 офис 111</p>
+
+        <p>
+          <a href="tel:+77011111111">+7 701 111 11 11</a> <br>
+          <a href="tel:+77022222222">+7 702 222 22 22</a> <br>
+        </p>
+
+        <p><a href="mailto:email@email.kz">email@email.kz</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- НАЧАЛО нав-off-canvas -->
+  <div id="navmenu-off-canvas" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+        <li class="uk-active"><a href="index.html">Главная</a></li>
+        <li><a href="portfolio.html">Наши работы</a></li>
+
+        <li class="uk-parent">
+          <a href="#">Кухни</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Подкатегория 1</a></li>
+            <li><a href="#">Подкатегория 2</a></li>
+          </ul>
+        </li>
+
+        <li class="uk-parent">
+          <a href="#">Фотопечать на стекле</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Подкатегория 1</a></li>
+            <li><a href="#">Подкатегория 2</a></li>
+          </ul>
+        </li>
+
+        <li class="uk-parent">
+          <a href="#">Шкафы-купе</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Подкатегория 1</a></li>
+            <li><a href="#">Подкатегория 2</a></li>
+          </ul>
+        </li>
+
+        <li class="uk-parent">
+          <a href="#">Гостиные</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Подкатегория 1</a></li>
+            <li><a href="#">Подкатегория 2</a></li>
+          </ul>
+        </li>
+
+        <li class="uk-parent">
+          <a href="#">Спальни</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Подкатегория 1</a></li>
+            <li><a href="#">Подкатегория 2</a></li>
+          </ul>
+        </li>
+
+        <li class="uk-parent">
+          <a href="#">Мебель на заказ</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Подкатегория 1</a></li>
+            <li><a href="#">Подкатегория 2</a></li>
+          </ul>
+        </li>
+
+        <li><a href="#">Контакты</a></li>
+
+      </ul>
+    </div>
+  </div>
+  <!-- КОНЕЦ нав-off-canvas -->
+
+
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <script src="js/uikit.min.js"></script>
+  <script src="js/components/sticky.min.js"></script>
+  <script src="js/components/slider.min.js"></script>
+  <script src="js/components/slideshow.min.js"></script>
+  <script src="js/components/lightbox.min.js"></script>
+
+
+</body>
+</html>
