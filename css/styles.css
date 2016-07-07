@@ -12,25 +12,6 @@ a {
   a:hover {
     color: white; }
 
-.uk-close-alt,
-.uk-close-alt:hover,
-.uk-modal-close {
-  color: black; }
-
-.navbar-toggle-container .uk-navbar-toggle,
-.navbar-toggle-container .uk-navbar-toggle:hover,
-.navbar-toggle-container .uk-navbar-toggle:active {
-  color: white;
-  display: block; }
-.navbar-toggle-container.uk-active .uk-navbar-toggle {
-  color: black;
-  background: rgba(255, 255, 255, 0.85); }
-
-.uk-slidenav {
-  color: rgba(200, 10, 10, 0.5); }
-  .uk-slidenav:hover, .uk-slidenav:active, .uk-slidenav:focus {
-    color: rgba(200, 10, 10, 0.8); }
-
 h1, h2, h3, h4, h5, h6 {
   color: white;
   font-family: "Play", Arial, sans-serif;
@@ -54,6 +35,39 @@ h3 {
   @media screen and (min-width: 768px) {
     h3 {
       font-size: 26px; } }
+
+.uk-close-alt,
+.uk-close-alt:hover,
+.uk-modal-close {
+  color: black; }
+
+.navbar-toggle-container .uk-navbar-toggle,
+.navbar-toggle-container .uk-navbar-toggle:hover,
+.navbar-toggle-container .uk-navbar-toggle:active {
+  color: white;
+  display: block; }
+.navbar-toggle-container.uk-active .uk-navbar-toggle {
+  color: black;
+  background: rgba(255, 255, 255, 0.85); }
+
+.uk-slidenav {
+  color: rgba(200, 10, 10, 0.5); }
+  .uk-slidenav:hover, .uk-slidenav:active, .uk-slidenav:focus {
+    color: rgba(200, 10, 10, 0.8); }
+
+.uk-breadcrumb {
+  margin-bottom: 25px; }
+  .uk-breadcrumb > li {
+    font-size: 20px; }
+
+.uk-breadcrumb > li:nth-child(n+2):before {
+  content: ">"; }
+
+.uk-breadcrumb > li a {
+  text-decoration: underline; }
+
+.uk-pagination > .uk-active > span {
+  background: rgba(200, 10, 10, 0.5); }
 
 /* КОНЕЦ ОБЩИЕ СТИЛИ */
 /* НАЧАЛО header */
@@ -236,7 +250,7 @@ ul.uk-nav {
   КОНЕЦ главная
 ----------------------------*/
 /*----------------------------
-  НАЧАЛО каталог
+  НАЧАЛО страниц Каталог и Наши Работы (у них общие стили)
 ----------------------------*/
 .catalog-page.content-container .uk-grid > div {
   margin-bottom: 25px; }
@@ -258,7 +272,34 @@ ul.uk-nav {
       text-overflow: ellipsis; }
 
 /*----------------------------
-  КОНЕЦ каталог
+  КОНЕЦ страниц Каталог и Наши Работы (у них общие стили)
+----------------------------*/
+/*----------------------------
+  НАЧАЛО страницы единичного товара
+----------------------------*/
+.photo-section .uk-slideshow {
+  margin-bottom: 10px; }
+  .photo-section .uk-slideshow li {
+    height: 220px;
+    background: 50% 50%/cover; }
+    .photo-section .uk-slideshow li a {
+      display: block;
+      height: 100%; }
+.photo-section .uk-slider-container li {
+  background-clip: content-box !important;
+  height: 85px;
+  background: 50% 50%/cover; }
+
+.characteristics-section h2 {
+  margin-top: 0; }
+
+.text-section-bottom {
+  max-width: 900px;
+  margin: 15px auto 0;
+  text-align: justify; }
+
+/*----------------------------
+  НАЧАЛО страницы единичного товара
 ----------------------------*/
 
 /*# sourceMappingURL=styles.css.map */

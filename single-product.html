@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Art Dani | Каталог</title>
+  <title>Art Dani | Единичный товар</title>
   <link rel="shortcut icon" href="favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Play&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -77,9 +77,10 @@
 
 <!--НАЧАЛО хлебные крошки-->
 <div class="uk-container uk-container-center">
-  <ul class="uk-breadcrumb uk-text-center">
+  <ul class="uk-breadcrumb">
     <li><a href="index.html">Главная</a></li>
-    <li class="uk-active"><span>Каталог</span></li>
+    <li><a href="catalog.html">Каталог</a></li>
+    <li class="uk-active"><span>Название продукта</span></li>
   </ul>
 </div>
 <!--КОНЕЦ хлебные крошки-->
@@ -147,60 +148,90 @@
       <!--КОНЕЦ нав-сайдбар-->
     </div>
 
+    <div class="uk-width-medium-3-4 single-product-page content-container">
 
-    <div class="uk-width-medium-3-4 catalog-page content-container">
+        <div class="uk-grid">
 
-      <div class="uk-grid">
-        <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
-          <a href="single-product.html" style="background-image: url('img/example1.jpg')">
-            <span>Описание</span>
-          </a>
+          <!--НАЧАЛО фотослайдер-->
+          <div class="uk-width-medium-6-10 photo-section">
+            <div id="slideshow" data-uk-slideshow="{autoplayInterval:1000}">
+
+              <div class="uk-slidenav-position">
+                <ul class="uk-slideshow">
+                  <li style="background-image: url('img/example1.jpg')">
+                    <a href="img/example1.jpg" data-uk-lightbox="{group:'single-photos'}"></a>
+                  </li>
+                  <li style="background-image: url('img/example2.jpg')">
+                    <a href="img/example2.jpg" data-uk-lightbox="{group:'single-photos'}"></a>
+                  </li>
+                  <li style="background-image: url('img/main1.jpg')">
+                    <a href="img/main1.jpg" data-uk-lightbox="{group:'single-photos'}"></a>
+                  </li>
+                  <li style="background-image: url('img/main2.jpg')">
+                    <a href="img/main2.jpg" data-uk-lightbox="{group:'single-photos'}"></a>
+                  </li>
+                  <li style="background-image: url('img/main3.jpg')">
+                    <a href="img/main3.jpg" data-uk-lightbox="{group:'single-photos'}"></a>
+                  </li>
+                </ul>
+                <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+                <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+              </div>
+              <div id="slider" class="uk-slidenav-position uk-hidden-small" data-uk-slider="{center:true}">
+                <div class="uk-slider-container">
+                  <ul class="uk-slider uk-grid uk-grid-small uk-grid-width-medium-1-3 uk-grid-width-small-1-2">
+                    <li style="background-image: url('img/example1.jpg')" data-uk-slideshow-item="0"></li>
+                    <li style="background-image: url('img/example2.jpg')" data-uk-slideshow-item="1"></li>
+                    <li style="background-image: url('img/main1.jpg')" data-uk-slideshow-item="2"></li>
+                    <li style="background-image: url('img/main2.jpg')" data-uk-slideshow-item="3"></li>
+                    <li style="background-image: url('img/main3.jpg')" data-uk-slideshow-item="4"></li>
+                  </ul>
+                  <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous"></a>
+                  <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next"></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--КОНЕЦ фотослайдер-->
+
+          <div class="uk-width-medium-4-10 characteristics-section">
+            <h2 class="uk-text-center">Название продукта</h2>
+            <p>Цена: <span>225000тг</span></p>
+            <p>Срок изготовления: <span>2-3 недели</span></p>
+            <p>Свойство: <span>значение</span></p>
+            <p>Свойство: <span>значение</span></p>
+            <p>Свойство: <span>значение</span></p>
+
+          </div>
         </div>
-        <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
-          <a href="single-product.html" style="background-image: url('img/example2.jpg')">
-            <span>Описание</span>
-          </a>
+
+        <!--НАЧАЛО текст в нижней части-->
+        <div class="text-section-bottom">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. </p>
         </div>
-        <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
-          <a href="single-product.html" style="background-image: url('img/example1.jpg')">
-            <span>Описание</span>
-          </a>
-        </div>
-        <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
-          <a href="single-product.html" style="background-image: url('img/example2.jpg')">
-            <span>Описание</span>
-          </a>
-        </div>
-        <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
-          <a href="single-product.html" style="background-image: url('img/example1.jpg')">
-            <span>Описание</span>
-          </a>
-        </div>
-        <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
-          <a href="single-product.html" style="background-image: url('img/example2.jpg')">
-            <span>Описание</span>
-          </a>
-        </div>
-      </div>
+        <!--КОНЕЦ текст в нижней части-->
 
     </div>
 
   </div>
 </main>
 
-<!--НАЧАЛО пагинация-->
-<div class="uk-container uk-container-center">
-  <ul class="uk-pagination uk-pagination-right">
-    <li><a href=""><i class="uk-icon-angle-double-left"></i></a></li>
-    <li class="uk-active"><span>1</span></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li><a href=""><i class="uk-icon-angle-double-right"></i></a></li>
-  </ul>
-</div>
-<!--КОНЕЦ пагинация-->
 
 <footer>
   <div class="footer-flex uk-container uk-container-center">
@@ -297,7 +328,6 @@
 <script src="js/components/slider.min.js"></script>
 <script src="js/components/slideshow.min.js"></script>
 <script src="js/components/lightbox.min.js"></script>
-
 
 </body>
 </html>

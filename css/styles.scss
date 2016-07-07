@@ -21,6 +21,34 @@ a {
   }
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  font-family: $font-rectangular;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  @media screen and (min-width: 768px){
+    font-size: 36px;
+  }
+}
+
+h2 {
+  font-size: 26px;
+  @media screen and (min-width: 768px){
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  @media screen and (min-width: 768px){
+    font-size: 26px;
+  }
+}
+
 .uk-close-alt,
 .uk-close-alt:hover,
 .uk-modal-close {
@@ -50,31 +78,22 @@ a {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: white;
-  font-family: $font-rectangular;
-  text-align: center;
-}
-
-h1 {
-  text-align: center;
-  font-size: 32px;
-  @media screen and (min-width: 768px){
-    font-size: 36px;
+.uk-breadcrumb {
+  margin-bottom: 25px;
+  &>li {
+    font-size: 20px;
   }
 }
-
-h2 {
-  font-size: 26px;
-  @media screen and (min-width: 768px){
-    font-size: 30px;
-  }
+.uk-breadcrumb>li:nth-child(n+2):before {
+  content: ">";
+}
+.uk-breadcrumb>li a {
+  text-decoration: underline;
 }
 
-h3 {
-  font-size: 22px;
-  @media screen and (min-width: 768px){
-    font-size: 26px;
+.uk-pagination {
+  &>.uk-active>span {
+    background: $color-active;
   }
 }
 
@@ -318,7 +337,7 @@ ul.uk-nav {
 ----------------------------*/
 
 /*----------------------------
-  НАЧАЛО каталог
+  НАЧАЛО страниц Каталог и Наши Работы (у них общие стили)
 ----------------------------*/
 .catalog-page.content-container {
   .uk-grid {
@@ -345,7 +364,46 @@ ul.uk-nav {
     }
   }
 }
+/*----------------------------
+  КОНЕЦ страниц Каталог и Наши Работы (у них общие стили)
+----------------------------*/
 
 /*----------------------------
-  КОНЕЦ каталог
+  НАЧАЛО страницы единичного товара
+----------------------------*/
+.photo-section {
+  .uk-slideshow {
+    margin-bottom: 10px;
+    li {
+      height: 220px;
+      background: 50% 50%/cover;
+      a {
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+
+  .uk-slider-container {
+    li {
+      background-clip: content-box !important;
+      height: 85px;
+      background: 50% 50%/cover;
+    }
+  }
+}
+
+.characteristics-section {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.text-section-bottom {
+  max-width: 900px;
+  margin: 15px auto 0;
+  text-align: justify;
+}
+/*----------------------------
+  НАЧАЛО страницы единичного товара
 ----------------------------*/
