@@ -1,0 +1,555 @@
+@charset "UTF-8";
+/* НАЧАЛО ОБЩИЕ СТИЛИ */
+/* НАЧАЛО подключаем шрифт "Rosa Marena": */
+@font-face {
+  font-family: "Rosa Marena";
+  src: url("../fonts/rosa_marena/Rosa_Marena.ttf") format("truetype");
+  font-weight: normal; }
+/* КОНЕЦ подключаем шрифт "Rosa Marena" */
+/* НАЧАЛО общие стили */
+body {
+  font-size: 16px;
+  line-height: 1.2; }
+
+.success-mail {
+  display: none; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+  a:hover, a:focus, a:active {
+    color: inherit;
+    text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2; }
+
+h2 {
+  font-size: 24px; }
+  @media screen and (min-width: 768px) {
+    h2 {
+      font-size: 30px; } }
+
+.uk-overlay-background {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+.uk-pagination {
+  margin-top: 0;
+  margin-bottom: 25px; }
+  .uk-pagination > .uk-active > span {
+    background: #cab331; }
+
+/* НАЧАЛО header */
+header {
+  background-color: #efefef;
+  position: relative;
+  z-index: 10; }
+  @media (min-width: 1220px) {
+    header {
+      background: 50% 100%/auto url("../img/header_background.png") repeat-x; } }
+  header .decorative-line {
+    background: #006832;
+    height: 8px; }
+  header .header__logo {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0; }
+    @media (min-width: 480px) {
+      header .header__logo {
+        max-width: 330px;
+        padding: 5px 10px 15px; } }
+    @media (min-width: 1220px) {
+      header .header__logo {
+        float: left; } }
+  @media (min-width: 1220px) {
+    header .navbar-and-contacts-col {
+      float: right;
+      padding-top: 15px; } }
+  header .navbar-and-contacts-col .contacts {
+    text-align: center; }
+    @media (min-width: 1220px) {
+      header .navbar-and-contacts-col .contacts {
+        text-align: right; } }
+    header .navbar-and-contacts-col .contacts span.address {
+      padding: 0 15px; }
+    header .navbar-and-contacts-col .contacts span + span {
+      display: block;
+      margin-top: 10px; }
+      @media (min-width: 480px) {
+        header .navbar-and-contacts-col .contacts span + span {
+          margin-top: 0;
+          display: inline-block; } }
+      @media (min-width: 960px) {
+        header .navbar-and-contacts-col .contacts span + span::before {
+          content: "|"; } }
+      header .navbar-and-contacts-col .contacts span + span a {
+        padding: 0 15px; }
+  header .navbar-and-contacts-col .uk-navbar {
+    background: transparent; }
+    header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav {
+      float: none;
+      text-align: center; }
+      header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li {
+        float: none;
+        display: inline-block;
+        text-align: left; }
+        header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li > a {
+          padding: 0 14px;
+          background: transparent;
+          font-size: 18px;
+          border-radius: 3px; }
+          header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li > a:hover {
+            background: rgba(0, 128, 0, 0.2); }
+      header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li.uk-active > a {
+        background: rgba(0, 128, 0, 0.1); }
+        header .navbar-and-contacts-col .uk-navbar .uk-navbar-nav > li.uk-active > a:hover {
+          background: rgba(0, 128, 0, 0.2); }
+    header .navbar-and-contacts-col .uk-navbar.uk-active {
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 2px #006832 solid;
+      left: 0;
+      right: 0; }
+      header .navbar-and-contacts-col .uk-navbar.uk-active .uk-navbar-nav li > a,
+      header .navbar-and-contacts-col .uk-navbar.uk-active .uk-navbar-nav li.uk-open > a {
+        color: black;
+        text-shadow: none; }
+        header .navbar-and-contacts-col .uk-navbar.uk-active .uk-navbar-nav li > a:hover,
+        header .navbar-and-contacts-col .uk-navbar.uk-active .uk-navbar-nav li.uk-open > a:hover {
+          border-radius: 0; }
+      header .navbar-and-contacts-col .uk-navbar.uk-active .uk-navbar-nav li.uk-active > a {
+        border-radius: 0;
+        background: rgba(0, 128, 0, 0.4);
+        color: white; }
+  header .uk-offcanvas .uk-nav-sub {
+    background: rgba(255, 255, 255, 0.2); }
+    header .uk-offcanvas .uk-nav-sub li a {
+      padding: 5px 0; }
+
+/* КОНЕЦ header */
+/* НАЧАЛО footer */
+footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: url("../img/background_plaster.png"); }
+  footer .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    text-align: center; }
+    @media (min-width: 480px) {
+      footer .footer-flex {
+        flex-flow: row;
+        text-align: left; } }
+    footer .footer-flex > a {
+      display: block; }
+    footer .footer-flex .map {
+      display: none; }
+      @media (min-width: 1220px) {
+        footer .footer-flex .map {
+          margin: 0 30px;
+          flex: 1;
+          display: block; } }
+    footer .footer-flex .contacts {
+      flex: 0 0 230px; }
+
+/* КОНЕЦ footer */
+/* НАЧАЛО main-section */
+.main-section {
+  background: 100% 0/cover url("../img/home_background_without_woman.jpg");
+  margin-top: -15px;
+  padding: 15px 0 25px; }
+  @media (min-width: 768px) {
+    .main-section {
+      background: 50% 0/cover url("../img/home_background.png");
+      min-height: 100vh; } }
+  .main-section .slogan-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .main-section .slogan-container .slogan {
+      color: #cab331;
+      line-height: 1;
+      font-family: "Rosa Marena", fantasy;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); }
+      @media screen and (min-width: 768px) {
+        .main-section .slogan-container .slogan {
+          font-size: 56px; } }
+  .main-section .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 768px) {
+      .main-section .form-container {
+        justify-content: flex-end; } }
+    .main-section .form-container form {
+      background: white;
+      border: 2px #cab331 solid;
+      border-radius: 5px;
+      max-width: 250px;
+      padding: 15px 25px;
+      text-align: center;
+      margin-top: 30px; }
+      @media (min-width: 768px) {
+        .main-section .form-container form {
+          margin-top: 60px;
+          min-width: 250px; } }
+      .main-section .form-container form h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-top: 15px; }
+      .main-section .form-container form input:not([type=submit]),
+      .main-section .form-container form textarea,
+      .main-section .form-container form input[type=submit] {
+        border: 1px #cab331 solid;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 2px;
+        box-sizing: border-box; }
+      .main-section .form-container form textarea {
+        resize: none;
+        min-height: 100px; }
+      .main-section .form-container form input[type=submit] {
+        background: #cab331;
+        cursor: pointer; }
+        .main-section .form-container form input[type=submit]:hover {
+          background: #a18f27;
+          color: white; }
+
+/* КОНЕЦ main-section */
+/* НАЧАЛО about */
+.about {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .about h2 {
+    border-bottom: 2px solid #006832;
+    text-align: right;
+    margin-left: 10%;
+    padding-right: 5%;
+    margin-right: 5%; }
+
+/* КОНЕЦ about */
+/* НАЧАЛО advantages */
+.advantages {
+  background: url("../img/background_plaster.png");
+  padding: 25px 0; }
+  .advantages .slogan {
+    color: #cab331;
+    line-height: 1;
+    font-family: "Rosa Marena", fantasy;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); }
+    @media screen and (min-width: 768px) {
+      .advantages .slogan {
+        font-size: 56px; } }
+  .advantages .uk-grid {
+    padding-top: 25px; }
+    .advantages .uk-grid > li {
+      display: flex;
+      align-items: center; }
+      .advantages .uk-grid > li img {
+        margin-right: 30px;
+        max-width: 100px; }
+        @media screen and (min-width: 768px) {
+          .advantages .uk-grid > li img {
+            max-width: none; } }
+      .advantages .uk-grid > li h4 {
+        font-size: 18px; }
+
+/* КОНЕЦ advantages */
+/* НАЧАЛО promotions */
+.promotions li {
+  height: auto !important;
+  overflow: visible !important; }
+.promotions .uk-overlay-panel {
+  color: black;
+  text-align: center;
+  padding: 15px; }
+  @media screen and (min-width: 768px) {
+    .promotions .uk-overlay-panel {
+      padding: 10px 40px; } }
+  .promotions .uk-overlay-panel h3 {
+    font-family: "Rosa Marena", fantasy;
+    font-size: 24px; }
+    @media screen and (min-width: 480px) {
+      .promotions .uk-overlay-panel h3 {
+        font-size: 48px; } }
+  .promotions .uk-overlay-panel .rectangle {
+    padding: 0 15px 15px; }
+    @media screen and (min-width: 768px) {
+      .promotions .uk-overlay-panel .rectangle {
+        padding: 10px 15px 15px;
+        border-radius: 5px;
+        border: 2px solid #cab331; } }
+    .promotions .uk-overlay-panel .rectangle .small {
+      font-size: 14px; }
+
+/* КОНЕЦ promotions */
+/* НАЧАЛО goods */
+.goods {
+  padding: 25px 0;
+  text-align: center; }
+  .goods .border {
+    border: 2px solid #cab331;
+    border-radius: 5px;
+    padding: 10px; }
+    .goods .border img {
+      border: 1px solid #cab331; }
+    .goods .border p {
+      font-size: 14px; }
+    .goods .border a {
+      color: #006732;
+      text-decoration: underline; }
+  .goods .go-to-catalog {
+    margin: 25px auto 0;
+    color: black;
+    border-radius: 2px;
+    background: #e4d030;
+    display: inline-block;
+    padding: 12px 50px; }
+    .goods .go-to-catalog:hover {
+      background: #a18f27;
+      color: white; }
+
+/* КОНЕЦ goods */
+/* НАЧАЛО catalog */
+.catalog {
+  background: 50% 50%/cover url("../img/catalog_background.jpg");
+  padding: 40px 0; }
+  .catalog > .uk-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center; }
+    @media (min-width: 960px) {
+      .catalog > .uk-container {
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: flex-end; } }
+  .catalog .go-to-catalog {
+    color: black;
+    border-radius: 2px;
+    background: #cab331;
+    display: inline-block;
+    padding: 12px 50px;
+    order: 2;
+    margin-top: 30px; }
+    @media (min-width: 960px) {
+      .catalog .go-to-catalog {
+        order: 1;
+        margin-bottom: 70px; } }
+    .catalog .go-to-catalog:hover {
+      background: #a18f27;
+      color: white; }
+  .catalog .content-section {
+    border: 2px solid #cab331;
+    border-radius: 5px;
+    background: white;
+    max-width: 630px;
+    box-sizing: border-box;
+    padding: 20px;
+    order: 1; }
+    @media (min-width: 960px) {
+      .catalog .content-section {
+        padding: 40px;
+        order: 2; } }
+    .catalog .content-section .decor-text_and_price {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-flow: column; }
+      @media (min-width: 960px) {
+        .catalog .content-section .decor-text_and_price {
+          flex-flow: row; } }
+      .catalog .content-section .decor-text_and_price .decor-text {
+        font-family: "Rosa Marena", fantasy;
+        font-size: 30px;
+        text-align: center; }
+        @media (min-width: 960px) {
+          .catalog .content-section .decor-text_and_price .decor-text {
+            text-align: left; } }
+      .catalog .content-section .decor-text_and_price .price {
+        font-size: 24px;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 6px 12px;
+        margin: 0; }
+        @media (min-width: 960px) {
+          .catalog .content-section .decor-text_and_price .price {
+            border: 2px solid #cab331; } }
+    .catalog .content-section .uk-grid > div {
+      display: flex;
+      align-items: center; }
+      .catalog .content-section .uk-grid > div img {
+        margin-right: 10px;
+        margin-top: 15px;
+        max-width: 90px; }
+        @media (min-width: 480px) {
+          .catalog .content-section .uk-grid > div img {
+            margin-right: 20px;
+            max-width: none; } }
+
+/* КОНЕЦ catalog */
+/******************************
+НАЧАЛО Страница Каталог
+*******************************/
+.filter {
+  background: url("../img/background_plaster.png");
+  background-clip: content-box; }
+  .filter:not(.on-off-canvas) {
+    padding-bottom: 35px; }
+  .filter .heading {
+    background: #cab331;
+    font-family: "Rosa Marena", fantasy;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    padding: 15px 10px 10px;
+    border-bottom: 3px #006832 solid; }
+    .filter .heading:not(.on-off-canvas) {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+    .filter .heading p {
+      margin-bottom: 0; }
+  .filter .uk-accordion-title {
+    margin-bottom: 0; }
+  .filter .uk-accordion-content {
+    padding: 0; }
+    .filter .uk-accordion-content .active {
+      background: rgba(202, 179, 49, 0.4); }
+    .filter .uk-accordion-content ul {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      .filter .uk-accordion-content ul li {
+        padding: 5px 10px; }
+        .filter .uk-accordion-content ul li a {
+          display: block; }
+  .filter h3 {
+    padding: 5px 10px;
+    margin: 0; }
+    .filter h3 a {
+      display: block; }
+
+.catalog-page .choose-category {
+  font-size: 16px;
+  margin: 0 auto 25px;
+  color: black;
+  border-radius: 2px;
+  background: #e4d030;
+  padding: 12px 50px;
+  border: none;
+  cursor: pointer; }
+  .catalog-page .choose-category:hover {
+    background: #a18f27;
+    color: white; }
+.catalog-page .product-list li {
+  margin-bottom: 35px; }
+.catalog-page .product-list .border {
+  text-align: center;
+  border: 2px solid #cab331;
+  border-radius: 5px;
+  padding: 10px; }
+  .catalog-page .product-list .border img {
+    border: 1px solid #cab331; }
+  .catalog-page .product-list .border p {
+    font-size: 14px; }
+  .catalog-page .product-list .border a {
+    color: #006732;
+    text-decoration: underline; }
+
+/******************************
+КОНЕЦ Страница Каталог
+*******************************/
+/******************************
+НАЧАЛО Страница Единичный товар
+*******************************/
+.photo-section .uk-slideshow {
+  border: 1px solid #cab331;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+.photo-section .uk-slider-container li img {
+  box-sizing: border-box;
+  border: 1px solid #cab331;
+  border-radius: 5px; }
+
+.text-section {
+  text-align: justify; }
+  .text-section .button {
+    font-size: 16px;
+    margin: 0 auto 25px;
+    color: black;
+    border-radius: 2px;
+    background: #e4d030;
+    padding: 12px 50px;
+    border: none;
+    cursor: pointer; }
+    .text-section .button:hover {
+      background: #a18f27;
+      color: white; }
+
+.text-section-bottom {
+  max-width: 900px;
+  margin: 25px auto;
+  text-align: justify; }
+
+/******************************
+КОНЕЦ Страница Единичный товар
+*******************************/
+/******************************
+НАЧАЛО Страница Контакты
+*******************************/
+.big-map {
+  width: 100%; }
+
+.contacts-page {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+  .contacts-page .contact-info-col form {
+    background: white;
+    border: 2px #cab331 solid;
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 25px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 30px 0; }
+    .contacts-page .contact-info-col form h3 {
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-top: 15px; }
+    .contacts-page .contact-info-col form input:not([type=submit]),
+    .contacts-page .contact-info-col form textarea,
+    .contacts-page .contact-info-col form input[type=submit] {
+      border: 1px #cab331 solid;
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 2px;
+      box-sizing: border-box; }
+    .contacts-page .contact-info-col form textarea {
+      resize: none;
+      min-height: 100px; }
+    .contacts-page .contact-info-col form input[type=submit] {
+      background: #cab331;
+      cursor: pointer; }
+      .contacts-page .contact-info-col form input[type=submit]:hover {
+        background: #a18f27;
+        color: white; }
+  .contacts-page .delivery-info-col h3 {
+    font-weight: bold;
+    font-size: 16px; }
+
+/******************************
+КОНЕЦ Страница Контакты
+*******************************/
+
+/*# sourceMappingURL=styles.css.map */

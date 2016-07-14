@@ -1,0 +1,424 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url(../fonts/HelveticaNeueCyr-Medium.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url(../fonts/HelveticaNeueCyr-Bold.otf);
+    font-weight: bold;
+}
+
+html{
+    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0 !important;
+}
+
+.main-page-body{
+    width: 100%;
+    background: white;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.main-page-body header{
+    margin-bottom: 1%;
+}
+
+.main-page-body header address:first-child{
+    text-align: left;
+}
+
+.main-page-body header address:first-child a span{
+    text-decoration: underline;
+}
+
+.main-page-body header address:last-child{
+    text-align: right;
+}
+
+.main-page-body header a{
+    color: #033452;
+}
+
+.main-page-body header address:last-child a:after{
+    content: '/';
+    margin: 0 5px;
+}
+
+.main-page-body header address:last-child a:last-child:after{
+    content: '';
+}
+
+.main-page-body .title-main{
+    margin-top: 5px;
+    margin-bottom: 4% !important;
+}
+
+.main-page-body .title-main>*{
+    color: #033452;
+    font-family: "Helvetica Neue";
+    font-weight: bold;
+}
+
+.main-page-body .title-main h1{
+    padding-left: 25%;
+    margin-bottom: 0 !important;
+}
+
+.main-page-body .title-main h2{
+    padding-left: 43%;
+    margin-top: 0;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.main-page-body .title-main h3{
+    font-size: 16px;
+    padding-left: 49%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main-menu{
+    margin-top: 35px;
+    margin-bottom: 1%;
+    position: relative;
+}
+
+.main-menu svg path{
+    fill: #033452;
+}
+
+.main-menu a{
+    text-decoration: none !important;
+}
+
+.main-menu p{
+    font-family: "Helvetica Neue";
+    color: #033452;
+    font-size: 18px;
+}
+
+.main-menu a h3{
+    font-size: 22px;
+    color: #033452;
+    margin-top: 10px;
+    font-family: "Helvetica Neue";
+}
+
+.title-devise{
+    margin-top: 1%;
+}
+
+.title-devise h3{
+    font-family: "Helvetica Neue";
+    font-size: 28px;
+    color: #033452;
+    font-weight: bold;
+    margin-top: 3%;
+}
+
+.nav-alt{
+    margin-top: 15px !important;
+}
+
+.menu-alt nav ul li a{
+    height: auto;
+    align-items: center;
+    display: flex;
+    color: #033452;
+    font-family: "Helvetica Neue";
+    font-size: 20px;
+    padding: 15px;
+}
+
+.menu-alt nav ul li a.uk-active{
+ text-decoration: underline;
+}
+
+.logo{
+    margin-bottom: 30px;
+}
+
+.logo-alt{
+    height:80px;
+}
+
+.menu-alt{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.menu-alt,
+.menu-alt > *{
+    background: transparent;
+}
+
+.review-site{
+    text-decoration: none;
+    color: white;
+}
+
+.main-menu a svg{
+    width: 100px;
+    height: 100px;
+}
+
+.menu-alt a svg{
+    width: 50px;
+    height: 50px;
+}
+.menu-alt a svg rect,
+.menu-alt a svg path{
+    background: white;
+    fill: #033452 ;
+}
+
+.menu-alt nav ul li.uk-active a,
+.menu-alt nav ul li:hover a,
+.menu-alt nav ul li:hover a svg path,
+.menu-alt nav ul li:hover a svg rect{
+    text-decoration: underline;
+    background: transparent;
+}
+
+.menu-alt nav ul li:hover a{
+    color:#033452;
+}
+
+.uk-navbar-nav>li.uk-active>a{
+    color: #033452;
+}
+
+.uk-navbar li.uk-active a svg path,
+.uk-navbar li.uk-active a svg rect{
+    fill: #033452;
+}
+
+.full-main nav,
+.full-main nav ul{
+    width: 100%;
+}
+
+.menu-alt .uk-active svg path,
+.menu-alt .uk-active svg rect{
+    fill: black;
+}
+
+.uk-navbar,
+.uk-navbar ul,
+.uk-navbar ul li{
+    display: flex;
+    align-items: stretch;
+}
+
+.uk-offcanvas-bar .uk-navbar,
+.uk-offcanvas-bar .uk-navbar .uk-navbar-nav{
+    display: block !important;
+}
+
+.uk-offcanvas-bar .uk-navbar .uk-navbar-nav a{
+    width: 100%;
+}
+
+.cases-body h1{
+    text-align: center;
+    margin-top: 15px;
+    font-family: "Helvetica Neue";
+    color: #033452;
+    font-weight: bold;
+}
+
+.overlay-case{
+    background: rgba(0,0,0,0.6);
+}
+
+.overlay-case h3{
+    font-family: "Helvetica Neue";
+    margin-bottom: 0;
+}
+
+.overlay-case p{
+    margin-top: 5px;
+    font-family: "Helvetica Neue";
+}
+
+.grid-case{
+    margin-top: 15px;
+}
+
+.grid-case .uk-overlay{
+    margin-top: 20px;
+}
+
+.grid-case .uk-width-small-1-1:last-child{
+    margin-bottom: 30px;
+}
+
+.services-menu .title-devise{
+    margin-top: 50px;
+}
+
+.single-content h3{
+    font-family: "Helvetica Neue";
+    color: #033452;
+}
+
+.single-content article,
+.single-content article>*{
+    font-family: "Helvetica Neue";
+    color: #033452;
+    font-size: 16px;
+}
+
+.slider-content{
+    position: relative;
+}
+
+.uk-dotnav{
+    margin-top: 0;
+}
+
+.uk-dotnav .uk-active a{
+    background: rgba(03,34,52,0.6);
+}
+
+.uk-dotnav a{
+    background: rgba(03,34,52,0.3);
+}
+
+.uk-breadcrumb a{
+    font-family: "Helvetica Neue";
+    color: #033452;
+}
+
+.uk-breadcrumb .uk-active a{
+    color: #dddddd;
+}
+
+a.uk-navbar-toggle{
+    position: absolute;
+    top: 26%;
+    left: 5%;
+}
+
+.uk-offcanvas-bar{
+    background: white;
+}
+
+.uk-offcanvas-bar li{
+    width: 100%;
+}
+
+header svg{
+    display: block;
+}
+
+.main-menu a:hover svg path,
+.main-menu a:hover svg rect{
+    fill: #000;
+}
+
+.main-menu a:hover h3{
+    text-decoration: underline;
+}
+
+.services-menu {
+    margin-top: 7%;
+}
+
+.visible-hidden{
+    visibility: hidden;
+}
+
+/*#link-1[class*=uk-animation-]{*/
+    /*-moz-animation-delay: 0.3s;*/
+    /*-o-animation-delay: 0.3s;*/
+    /*-webkit-animation-delay: 0.3s;*/
+    /*animation-delay: 0.3s ;*/
+/*}*/
+
+/*#link-2[class*=uk-animation-]{*/
+    /*-moz-animation-delay: 0.4s;*/
+    /*-o-animation-delay: 0.4s;*/
+    /*-webkit-animation-delay: 0.4s;*/
+    /*animation-delay: 0.4s ;*/
+/*}*/
+
+/*#link-3[class*=uk-animation-]{*/
+    /*-moz-animation-delay: 0.5s;*/
+    /*-o-animation-delay: 0.5s;*/
+    /*-webkit-animation-delay: 0.5s;*/
+    /*animation-delay: 0.5s ;*/
+/*}*/
+
+/*#link-1.uk-animation-slide-left,*/
+/*#link-2.uk-animation-slide-left,*/
+/*#link-3.uk-animation-slide-left{*/
+    /*-moz-animation-delay: 0s;*/
+    /*-o-animation-delay: 0s;*/
+    /*-webkit-animation-delay: 0s;*/
+    /*animation-delay: 0s;*/
+/*}*/
+
+@media (max-width: 768px){
+    header address{
+        text-align: center !important;
+    }
+    .main-page-body .title-main h1{
+        padding-left: 0;
+    }
+    .main-page-body .title-main h2{
+        padding-left: 15%;
+    }
+    .main-page-body .title-main h3{
+        padding-left: 3%;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape){
+    .main-page-body .title-main h1,
+    .main-page-body .title-main h2,
+    .main-page-body .title-main h3{
+        text-align: center;
+    }
+    header address{
+        text-align: center !important;
+    }
+    .main-page-body .title-main h1{
+        padding-left: 0;
+    }
+    .main-page-body .title-main h2{
+        padding-left: 15%;
+    }
+    .main-page-body .title-main h3{
+        padding-left: 3%;
+    }
+}
+
+@media (max-width: 1024px){
+    .main-page-body .title-main h1,
+    .main-page-body .title-main h2,
+    .main-page-body .title-main h3{
+        text-align: center;
+    }
+    header address{
+        text-align: center !important;
+    }
+    .main-page-body .title-main h1{
+        padding-left: 0;
+    }
+    .main-page-body .title-main h2{
+        padding-left: 15%;
+    }
+    .main-page-body .title-main h3{
+        padding-left: 3%;
+    }
+}

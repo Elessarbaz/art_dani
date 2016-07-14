@@ -1,0 +1,749 @@
+/* НАЧАЛО ОБЩИЕ СТИЛИ */
+
+/* НАЧАЛО подключаем шрифт "Rosa Marena": */
+@font-face {
+  font-family: "Rosa Marena";
+  src: url("../fonts/rosa_marena/Rosa_Marena.ttf") format("truetype");
+  font-weight: normal;
+}
+/* КОНЕЦ подключаем шрифт "Rosa Marena" */
+
+//НАЧАЛО объявляем переменные SASS
+$decor-font: "Rosa Marena", fantasy;
+$main-color-light: #cab331; //goldish
+$main-color-dark: #006832; //green
+//КОНЕЦ объявляем переменные SASS
+
+/* НАЧАЛО общие стили */
+body {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.success-mail{
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 24px;
+  @media screen and (min-width: 768px){
+    font-size: 30px;
+  }
+}
+
+.uk-overlay-background { //overlay, например в Акциях
+  background-color: rgba(255,255,255,.7);
+}
+
+.uk-pagination {
+  margin-top: 0;
+  margin-bottom: 25px;
+  &>.uk-active>span {
+    background: $main-color-light;
+  }
+}
+
+
+/* НАЧАЛО header */
+header {
+  background-color: #efefef;
+  position: relative;
+  z-index: 10;
+  @media (min-width: 1220px) {
+    background: 50% 100%/auto url("../img/header_background.png") repeat-x;
+  }
+
+  .decorative-line {
+    background: $main-color-dark;
+    height: 8px;
+  }
+
+  .header__logo {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 0;
+
+    @media (min-width: 480px) {
+      max-width: 330px;
+      padding: 5px 10px 15px;
+    }
+    
+    @media (min-width: 1220px) {
+      float: left;
+    }
+  }
+
+  .navbar-and-contacts-col {
+
+    @media (min-width: 1220px) {
+      float: right;
+      padding-top: 15px;
+    }
+    .contacts {
+      text-align: center;
+
+      @media (min-width: 1220px) {
+        text-align: right;
+      }
+
+      span.address {
+        padding: 0 15px;
+      }
+
+      span + span {
+        display: block;
+        margin-top: 10px;
+        @media (min-width: 480px) {
+          margin-top: 0;
+          display: inline-block;
+        }
+
+        &::before {
+          @media (min-width: 960px) {
+            content: "|";
+          }
+        }
+
+        a {
+          padding: 0 15px;
+        }
+      }
+    }
+
+    .uk-navbar {
+      background: transparent;
+
+      .uk-navbar-nav {
+        float: none;
+        text-align: center;
+        &>li {
+          float: none;
+          display: inline-block;
+          text-align: left;
+          &>a {
+            padding: 0 14px;
+            background: transparent;
+            font-size: 18px;
+            border-radius: 3px;
+            &:hover {
+              background: rgba(0, 128, 0, 0.2);
+            }
+          }
+        }
+        &>li.uk-active > a {
+          background: rgba(0, 128, 0, 0.1);
+          &:hover {
+            background: rgba(0, 128, 0, 0.2);
+          }
+        }
+      }
+
+      &.uk-active {
+        background: rgba(255,255,255,.9);
+        border-bottom: 2px $main-color-dark solid;
+        left: 0;
+        right: 0;
+        .uk-navbar-nav li > a,
+        .uk-navbar-nav li.uk-open > a {
+          color: black;
+          text-shadow: none;
+          &:hover {
+            border-radius: 0;
+          }
+        }
+        .uk-navbar-nav li.uk-active > a {
+          border-radius: 0;
+          background: rgba(0, 128, 0, 0.4);
+          color: white;
+        }
+      }
+    }
+  }
+
+  .uk-offcanvas {
+    .uk-nav-sub {
+      background: rgba(255,255,255,.2);
+      li a {
+        padding: 5px 0;
+      }
+    }
+  }
+}
+/* КОНЕЦ header */
+
+/* НАЧАЛО footer */
+footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: url("../img/background_plaster.png");
+  .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    @media (min-width: 480px) {
+      flex-flow: row;
+      text-align: left;
+    }
+    &> a {
+      display: block;
+    }
+    .map {
+      display: none;
+      @media (min-width: 1220px) {
+        margin: 0 30px;
+        flex: 1;
+        display: block;
+      }
+    }
+    .contacts {
+      flex: 0 0 230px;
+    }
+
+  }
+}
+/* КОНЕЦ footer */
+
+/* НАЧАЛО main-section */
+.main-section {
+  background: 100% 0/cover url("../img/home_background_without_woman.jpg");
+  margin-top: -15px;
+  padding: 15px 0 25px;
+
+  @media (min-width: 768px) {
+    background: 50% 0/cover url("../img/home_background.png");
+    min-height: 100vh;
+  }
+
+  .slogan-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .slogan {
+      color: $main-color-light;
+      line-height: 1;
+      font-family: $decor-font;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+      @media screen and (min-width: 768px){
+        font-size: 56px;
+      }
+    }
+  }
+
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+    form {
+      background: white;
+      border: 2px $main-color-light solid;
+      border-radius: 5px;
+      max-width: 250px;
+      padding: 15px 25px;
+      text-align: center;
+      margin-top: 30px;
+      @media (min-width: 768px) {
+        margin-top: 60px;
+        min-width: 250px;
+      }
+
+      h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-top: 15px;
+      }
+
+      input:not([type=submit]),
+      textarea,
+      input[type=submit] {
+        border: 1px $main-color-light solid;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        resize: none;
+        min-height: 100px;
+      }
+
+      input[type=submit] {
+        background: $main-color-light;
+        cursor: pointer;
+        &:hover {
+          background: darken($main-color-light, 10);
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+/* КОНЕЦ main-section */
+
+/* НАЧАЛО about */
+.about {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  h2 {
+    border-bottom: 2px solid $main-color-dark;
+    text-align: right;
+    margin-left: 10%;
+    padding-right: 5%;
+    margin-right: 5%;
+  }
+}
+/* КОНЕЦ about */
+
+/* НАЧАЛО advantages */
+.advantages {
+  background: url("../img/background_plaster.png");
+  padding: 25px 0;
+
+  .slogan {
+    color: $main-color-light;
+    line-height: 1;
+    font-family: $decor-font;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 10px 10px 5px rgba(0,0,0,0.1);
+    @media screen and (min-width: 768px){
+      font-size: 56px;
+    }
+  }
+
+  .uk-grid {
+    padding-top: 25px;
+    & > li {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 30px;
+        max-width: 100px;
+        @media screen and (min-width: 768px){
+          max-width: none;
+        }
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+    }
+  }
+}
+/* КОНЕЦ advantages */
+
+/* НАЧАЛО promotions */
+.promotions {
+  li {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .uk-overlay-panel {
+    color: black;
+    text-align: center;
+    padding: 15px;
+    @media screen and (min-width: 768px) {
+      padding: 10px 40px;
+    }
+
+    h3 {
+      font-family: $decor-font;
+      font-size: 24px;
+      @media screen and (min-width: 480px){
+        font-size: 48px;
+      }
+    }
+
+    .rectangle {
+      padding: 0 15px 15px;
+      @media screen and (min-width: 768px) {
+        padding: 10px 15px 15px;
+        border-radius: 5px;
+        border: 2px solid $main-color-light;
+      }
+
+      .small {
+        font-size: 14px;
+      }
+    }
+  }
+}
+/* КОНЕЦ promotions */
+
+/* НАЧАЛО goods */
+.goods {
+  padding: 25px 0;
+  text-align: center;
+
+  .border {
+    border: 2px solid $main-color-light;
+    border-radius: 5px;
+    padding: 10px;
+
+    img {
+      border: 1px solid $main-color-light;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      color: #006732;
+      text-decoration: underline;
+    }
+  }
+
+  .go-to-catalog { //ссылка перехода в каталог
+    margin: 25px auto 0;
+    color: black;
+    border-radius: 2px;
+    background: #e4d030;
+    display: inline-block;
+    padding: 12px 50px;
+    &:hover {
+      background: darken($main-color-light, 10);
+      color: white;
+    }
+  }
+}
+/* КОНЕЦ goods */
+
+/* НАЧАЛО catalog */
+.catalog {
+  background: 50% 50%/cover url("../img/catalog_background.jpg");
+  padding: 40px 0;
+
+  &>.uk-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: 960px) {
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  .go-to-catalog { //ссылка перехода в каталог
+    color: black;
+    border-radius: 2px;
+    background: #cab331;
+    display: inline-block;
+    padding: 12px 50px;
+    order: 2;
+    margin-top: 30px;
+    @media (min-width: 960px) {
+      order: 1;
+      margin-bottom: 70px;
+    }
+    &:hover {
+      background: darken($main-color-light, 10);
+      color: white;
+    }
+  }
+  .content-section {
+    border: 2px solid $main-color-light;
+    border-radius: 5px;
+    background: white;
+    max-width: 630px;
+    box-sizing: border-box;
+    padding: 20px;
+    order: 1;
+    @media (min-width: 960px) {
+      padding: 40px;
+      order: 2;
+    }
+    .decor-text_and_price {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-flow: column;
+      @media (min-width: 960px) {
+        flex-flow: row;
+      }
+      .decor-text {
+        font-family: $decor-font;
+        font-size: 30px;
+        text-align: center;
+        @media (min-width: 960px) {
+          text-align: left;
+        }
+      }
+      .price {
+        font-size: 24px;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 6px 12px;
+        margin: 0;
+        @media (min-width: 960px) {
+          border: 2px solid $main-color-light;
+        }
+      }
+    }
+    .uk-grid {
+      & > div {
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 10px;
+          margin-top: 15px;
+          max-width: 90px;
+          @media (min-width: 480px) {
+            margin-right: 20px;
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+/* КОНЕЦ catalog */
+
+/******************************
+НАЧАЛО Страница Каталог
+*******************************/
+.filter {
+  background: url("../img/background_plaster.png");
+  background-clip: content-box;
+  &:not(.on-off-canvas) {
+    padding-bottom: 35px;
+  }
+  .heading {
+    background: $main-color-light;
+    font-family: $decor-font;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    padding: 15px 10px 10px;
+    border-bottom: 3px $main-color-dark solid;
+    &:not(.on-off-canvas) {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .uk-accordion-title {
+    margin-bottom: 0;
+  }
+  .uk-accordion-content {
+    padding: 0;
+    .active {
+      background: rgba(202,179,49,.4);
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+
+      li {
+        padding: 5px 10px;
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+
+  h3 {
+    padding: 5px 10px;
+    margin: 0;
+    a {
+      display: block;
+    }
+  }
+
+}
+
+.catalog-page {
+  .choose-category {//ссылка перехода в каталог
+    font-size: 16px;
+    margin: 0 auto 25px;
+    color: black;
+    border-radius: 2px;
+    background: #e4d030;
+    padding: 12px 50px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background: darken($main-color-light, 10);
+      color: white;
+    }
+  }
+  .product-list {
+
+    li {
+     margin-bottom: 35px;
+    }
+
+    .border {
+      text-align: center;
+      border: 2px solid $main-color-light;
+      border-radius: 5px;
+      padding: 10px;
+
+      img {
+        border: 1px solid $main-color-light;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      a {
+        color: #006732;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+/******************************
+КОНЕЦ Страница Каталог
+*******************************/
+
+/******************************
+НАЧАЛО Страница Единичный товар
+*******************************/
+.photo-section {
+  .uk-slideshow {
+    border: 1px solid $main-color-light;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  .uk-slider-container {
+    li {
+      img {
+        box-sizing: border-box;
+        border: 1px solid $main-color-light;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.text-section {
+  text-align: justify;
+  .button {//ссылка перехода в каталог
+    font-size: 16px;
+    margin: 0 auto 25px;
+    color: black;
+    border-radius: 2px;
+    background: #e4d030;
+    padding: 12px 50px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background: darken($main-color-light, 10);
+      color: white;
+    }
+  }
+}
+
+.text-section-bottom {
+  max-width: 900px;
+  margin: 25px auto;
+  text-align: justify;
+}
+
+/******************************
+КОНЕЦ Страница Единичный товар
+*******************************/
+
+/******************************
+НАЧАЛО Страница Контакты
+*******************************/
+.big-map {
+  width: 100%;
+}
+.contacts-page {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  .contact-info-col {
+    form {
+      background: white;
+      border: 2px $main-color-light solid;
+      border-radius: 5px;
+      width: 100%;
+      padding: 15px 25px;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 30px 0;
+
+      h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-top: 15px;
+      }
+
+      input:not([type=submit]),
+      textarea,
+      input[type=submit] {
+        border: 1px $main-color-light solid;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        resize: none;
+        min-height: 100px;
+      }
+
+      input[type=submit] {
+        background: $main-color-light;
+        cursor: pointer;
+        &:hover {
+          background: darken($main-color-light, 10);
+          color: white;
+        }
+      }
+    }
+  }
+
+  .delivery-info-col {
+    h3 {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+}
+
+/******************************
+КОНЕЦ Страница Контакты
+*******************************/
