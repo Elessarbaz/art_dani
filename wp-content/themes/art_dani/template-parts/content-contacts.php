@@ -1,4 +1,4 @@
-<?php $obj=get_queried_object(); ?>
+
 <!--НАЧАЛО слайдер-->
 <div class="main-slider uk-slidenav-position" data-uk-slider="{autoplay:true, autoplayInterval: 4000}">
 
@@ -10,7 +10,7 @@
 			<li style="background-image: url('<?=get_the_post_thumbnail_url($image1->ID)?>')">
 				<p><?=get_the_title($image1->ID)?></p>
 			</li>
-			<?php }  ?>
+			<?php } wp_reset_query(); ?>
 		</ul>
 	</div>
 	<a href="" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous"></a>
@@ -19,6 +19,12 @@
 </div>
 <!--КОНЕЦ слайдер-->
 
+<!--НАЧАЛО хлебные крошки-->
+<div class="uk-container uk-container-center">
+	<?php pp_get_breadcrumb('uk-breadcrumb') ?>
+</div>
+<!--КОНЕЦ хлебные крошки-->
+<?php $obj=get_queried_object();?>
 <main class="uk-container uk-container-center">
 	<div class="uk-grid">
 
@@ -47,23 +53,27 @@
 			<!--КОНЕЦ нав-сайдбар-->
 		</div>
 
+		<div class="uk-width-medium-3-4 contacts content-container">
+			<h2>Контакты</h2>
+			<div class="map">
+				<script type="text/javascript" charset="utf-8" async
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fyycaM9ARr4kPXttQAeX7dWrevcM_1oN&width=100%&height=290&lang=ru_RU&sourceType=constructor"></script>
+			</div>
 
-		<div class="uk-width-medium-3-4 index content-container">
-			<h1><?=get_the_title()?></h1>
-			<p class="summary">
-				<?=get_the_content()?>
-			</p>
-			<h2>Наши приемущества</h2>
-			<?=get_field('advantages')?>
-			<?php foreach (pp_gallery_get() as $key=>$image): ?>
-			<?=$image->alt?>
+			<p>г.Алматы ул. Улица 1/1 , уг. ул. Улица
+				Дом 11 офис 111</p>
+
 			<p>
-				<a href="<?=$image->url?>" data-uk-lightbox title="Описание">
-					<img src="<?=$image->url?>" class="<?php if (!$key%2){echo'uk-float-left'; } else { echo'uk-float-right'; } ?> uk-float-left">
-				</a>
-				<?=$image->description?>
+				<a href="tel:+77011111111">+7 701 111 11 11</a> <br>
+				<a href="tel:+77022222222">+7 702 222 22 22</a> <br>
 			</p>
-			<?php endforeach; ?>
+
+			<p><a href="mailto:email@email.kz">email@email.kz</a></p>
+
+			<h2><i class="uk-icon-truck"></i> Доставка</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci animi, beatae corporis cum cumque delectus distinctio dolore earum eligendi eos est et eum eveniet explicabo harum ipsa iste iure laboriosam maiores maxime nam necessitatibus nisi odio officia optio perspiciatis praesentium quasi quibusdam quis, repudiandae rerum sunt velit voluptas voluptate.</p>
+
 		</div>
 
 	</div>

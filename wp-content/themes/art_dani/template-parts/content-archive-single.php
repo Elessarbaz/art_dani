@@ -1,7 +1,7 @@
 <div class="uk-width-large-1-3 uk-width-medium-1-2 uk-width-small-1-1">
 	<a href="<?=get_permalink()?>">
 		<div class="image" style="background-image: url('<?=get_the_post_thumbnail_url()?>')">
-			<span>Описание</span>
+			<span><?=get_the_title()?></span>
 		</div>
 		<br>
 			Цена: <span><?=get_field('price')?></span> <br>

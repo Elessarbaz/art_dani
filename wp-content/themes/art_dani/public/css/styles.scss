@@ -292,7 +292,7 @@ ul.uk-nav {
     }
   }
   li.uk-active {
-    a {
+    &>a {
       background: $color-active;
     }
   }

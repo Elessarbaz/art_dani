@@ -7,8 +7,15 @@
  * @package art_dani
  */
 
-get_header();
+
 $obj=get_queried_object();
+$query_url=$_SERVER['REDIRECT_URL'];
+$post=count(get_posts(array('category_name'=>$obj->slug,'posts_per_page'=>-1)));
+$page_post=get_option('posts_per_page');
+$page_count=ceil($post/$page_post);
+$page_num=(int)get_query_var('page');
+$offset=$page_num*$page_post;
+get_header();
 ?>
 
 	<div id="primary" class="content-area">
@@ -45,22 +52,25 @@ $obj=get_queried_object();
 						<!--НАЧАЛО нав-сайдбар-->
 						<ul class="uk-nav uk-hidden-small uk-nav-parent-icon" data-uk-nav="{multiple:true}">
 							<?php $menu=wp_get_nav_menu_items('main');
-							foreach ($menu as $key=>$val)  { if (!$val->menu_item_parent):
+							foreach ($menu as $key=>$val)  : $class=''; if (!$val->menu_item_parent):
 								$child=child($menu,$val);
+								if($val->object_id==$obj->ID||$child){ $class='uk-active';}
 								if (!$child):
 									?>
-									<li class="uk-active"><a href="<?=$val->url?>"><?=$val->title?></a></li>
+									<li class="<?=$class?>"><a href="<?=$val->url?>"><?=$val->title?></a></li>
 								<?php else: ?>
-									<li class="uk-parent">
+									<li class="uk-parent <?=$class?>">
 										<a href="#"><?=$val->title?></a>
 										<ul class="uk-nav-sub">
-											<?php foreach ($child as $key1=>$val1): ?>
-												<li><a  href="<?=$val1->url?>"><?=$val1->title?></a></li>
+											<?php foreach ($child as $key1=>$val1): $class='';
+												if($val1->object_id==$obj->term_id){ $class='uk-active';}
+												?>
+												<li class="<?=$class?>"><a  href="<?=$val1->url?>"><?=$val1->title?></a></li>
 											<?php endforeach; ?>
 										</ul>
 									</li>
 								<?php endif; ?>
-							<?php endif; } ?>
+							<?php endif; endforeach; wp_reset_query() ?>
 						</ul>
 						<!--КОНЕЦ нав-сайдбар-->
 					</div>
@@ -69,7 +79,9 @@ $obj=get_queried_object();
 					<div class="uk-width-medium-3-4 catalog-page content-container">
 						
 						<div class="uk-grid">
+
 							<?php
+							query_posts(array('category_name'=>$obj->slug,'posts_per_page'=>$page_post,'offset'=>$offset));
 							if ( have_posts() ) : ?>
 								<?php
 								while ( have_posts() ) : the_post();
@@ -84,17 +96,22 @@ $obj=get_queried_object();
 			</main>
 
 			<!--НАЧАЛО пагинация-->
-			<div class="uk-container uk-container-center">
-				<ul class="uk-pagination uk-pagination-right">
-					<li><a href=""><i class="uk-icon-angle-double-left"></i></a></li>
-					<li class="uk-active"><span>1</span></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href=""><i class="uk-icon-angle-double-right"></i></a></li>
+			<?php if($page_count>1):?>
+				<!--НАЧАЛО пагинация-->
+				<ul class="uk-pagination uk-pagination-right uk-container uk-container-center">
+					<li><a href="<?=$query_url?>?page=0"><i class="uk-icon-angle-double-left"></i></a></li>
+					<?php for ($i=0; $i<$page_count; $i++): $class=''; if ($i==$page_num){$class='class="uk-active"';} ?>
+						<li data-id="<?=$i?>" data-id1="<?=$page_num?>" <?=$class?> >
+							<?php if ($i==$page_num):?><span><?php endif;?>
+								<a href="<?=$query_url.'?page='.$i?>">
+								<?=$i+1?>
+								</a>
+								<?php if ($i==$page_num):?></span><?php endif;?>
+						</li>
+					<?php endfor; ?>
+					<li><a href="<?=$query_url?>?page=<?=$page_count-1?>"><i class="uk-icon-angle-double-right"></i></a></li>
 				</ul>
-			</div>
+			<?php endif; ?>
 			<!--КОНЕЦ пагинация-->
 
 
