@@ -56,23 +56,21 @@
 		<div class="uk-width-medium-3-4 contacts content-container">
 			<h2>Контакты</h2>
 			<div class="map">
-				<script type="text/javascript" charset="utf-8" async
-						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=fyycaM9ARr4kPXttQAeX7dWrevcM_1oN&width=100%&height=290&lang=ru_RU&sourceType=constructor"></script>
+				<?=get_field('map',4)?>
 			</div>
 
-			<p>г.Алматы ул. Улица 1/1 , уг. ул. Улица
-				Дом 11 офис 111</p>
+			<p><?=get_field('address',4)?></p>
 
 			<p>
-				<a href="tel:+77011111111">+7 701 111 11 11</a> <br>
-				<a href="tel:+77022222222">+7 702 222 22 22</a> <br>
+				<a href="tel:<?=get_field('phone-1',4)?>"><?=get_field('phone-1',4)?></a> <br>
+				<a href="tel:<?=get_field('phone-2',4)?>"><?=get_field('phone-2',4)?></a> <br>
 			</p>
 
-			<p><a href="mailto:email@email.kz">email@email.kz</a></p>
+			<p><a href="mailto:<?=get_field('email',4)?>"><?=get_field('email',4)?></a></p>
 
 			<h2><i class="uk-icon-truck"></i> Доставка</h2>
 
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci animi, beatae corporis cum cumque delectus distinctio dolore earum eligendi eos est et eum eveniet explicabo harum ipsa iste iure laboriosam maiores maxime nam necessitatibus nisi odio officia optio perspiciatis praesentium quasi quibusdam quis, repudiandae rerum sunt velit voluptas voluptate.</p>
+			<p><?=get_the_content()?></p>
 
 		</div>
 
