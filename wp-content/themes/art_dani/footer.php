@@ -28,59 +28,24 @@
 <div id="navmenu-off-canvas" class="uk-offcanvas">
 	<div class="uk-offcanvas-bar">
 		<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="{multiple:true}">
-			<li class="uk-active"><a href="index.html">Главная</a></li>
-			<li><a href="portfolio.html">Наши работы</a></li>
-
-			<li class="uk-parent">
-				<a href="#">Кухни</a>
-				<ul class="uk-nav-sub">
-					<li><a href="catalog.html">Подкатегория 1</a></li>
-					<li><a href="catalog.html">Подкатегория 2</a></li>
-				</ul>
-			</li>
-
-			<li class="uk-parent">
-				<a href="#">Фотопечать на стекле</a>
-				<ul class="uk-nav-sub">
-					<li><a href="catalog.html">Подкатегория 1</a></li>
-					<li><a href="catalog.html">Подкатегория 2</a></li>
-				</ul>
-			</li>
-
-			<li class="uk-parent">
-				<a href="#">Шкафы-купе</a>
-				<ul class="uk-nav-sub">
-					<li><a href="catalog.html">Подкатегория 1</a></li>
-					<li><a href="catalog.html">Подкатегория 2</a></li>
-				</ul>
-			</li>
-
-			<li class="uk-parent">
-				<a href="#">Гостиные</a>
-				<ul class="uk-nav-sub">
-					<li><a href="catalog.html">Подкатегория 1</a></li>
-					<li><a href="catalog.html">Подкатегория 2</a></li>
-				</ul>
-			</li>
-
-			<li class="uk-parent">
-				<a href="#">Спальни</a>
-				<ul class="uk-nav-sub">
-					<li><a href="catalog.html">Подкатегория 1</a></li>
-					<li><a href="catalog.html">Подкатегория 2</a></li>
-				</ul>
-			</li>
-
-			<li class="uk-parent">
-				<a href="#">Мебель на заказ</a>
-				<ul class="uk-nav-sub">
-					<li><a href="catalog.html">Подкатегория 1</a></li>
-					<li><a href="catalog.html">Подкатегория 2</a></li>
-				</ul>
-			</li>
-
-			<li><a href="contacts.html">Контакты</a></li>
-
+			<?php $menu=wp_get_nav_menu_items('main');
+			foreach ($menu as $key=>$val)  : $class=''; if (!$val->menu_item_parent):
+				$child=child($menu,$val);
+				if($val->object_id==$obj->ID){ $class='uk-active';}
+				if (!$child):
+					?>
+					<li class="<?=$class?>"><a href="<?=$val->url?>"><?=$val->title?></a></li>
+				<?php else: ?>
+					<li class="uk-parent <?=$class?>">
+						<a href="#"><?=$val->title?></a>
+						<ul class="uk-nav-sub">
+							<?php foreach ($child as $key1=>$val1): ?>
+								<li><a  href="<?=$val1->url?>"><?=$val1->title?></a></li>
+							<?php endforeach; ?>
+						</ul>
+					</li>
+				<?php endif; ?>
+			<?php endif; endforeach; wp_reset_query() ?>
 		</ul>
 	</div>
 </div>
